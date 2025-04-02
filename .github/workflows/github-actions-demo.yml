@@ -1,12 +1,12 @@
 name: GitHub Actions EPROD Training Demo
 
-on: 
+on:
   push:
     branches: [ main ]
     paths-ignore: [.github/**]
   pull_request:
     branches: [ main ]
-  schedule: 
+  schedule:
     - cron: '15 6 * * 0'
   workflow_dispatch:
 
@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo " The Job was triggers by an event: ${{ github.event_name }}"
-          echo " The names of the branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+          echo " The Job was triggered by an event: ${{ github.event_name }}"
+          echo " The name of the branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
 
       - uses: actions/checkout@v4
 
-      - name: List files that exists in this repo
+      - name: List files that exist in this repo
         run: |
-          echo "The repository ${{ github.repository }} contains the following files"
-          ls ${{ github.workspace }}
+          echo "The repository ${{ github.repository }} contains the following files: "
+          tree
