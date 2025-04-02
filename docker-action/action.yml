@@ -1,1 +1,2 @@
-
+name: 'Hello World Docker Action'
+description: 'Say hello to a user or the world'
