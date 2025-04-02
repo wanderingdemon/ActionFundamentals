@@ -22,4 +22,4 @@ jobs:
 
       - name: List files that exists in this repo
         run: |
-          echo "The repository ${{ github.repository }} contains the following files $ {{ github.files }} "
+          echo "The repository ${{ github.repository }} contains the following files $ {{ github.workspace }} "
