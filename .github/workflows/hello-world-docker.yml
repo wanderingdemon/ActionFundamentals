@@ -17,7 +17,7 @@ jobs:
         id: hello-action
         uses: ./docker-action
         with:
-          who-to-greet: '@ellisd4'
+          who-to-greet: '@wanderingdemon'
 
       - name: Get the output time in container
         run: echo "The time twas ${{ steps.hello-action.outputs.time }} when the action said hello!" 
